@@ -12,11 +12,7 @@ import { counter } from "@fortawesome/fontawesome-svg-core";
 function App() {
   const [cart, setCart] = useState([]);
 
-<<<<<<< HEAD
   // ...couldBeAnything the '...' is called a spread operator
-=======
-  // ...couldBeAnything the '...' is called a spread operatorrrss
->>>>>>> 59415e9d85c1e069117567ce26bd664a7a01ba52
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id);
     setCart(
@@ -40,12 +36,12 @@ function App() {
   // I think this is changeQuantity, yeah compirmed
   function updateCart(item, newQuantity) {
     setCart((oldCart) =>
-      oldCart.map((oldItem) => 
+      oldCart.map((oldItem) =>
         oldItem.id === item.id
           ? {
-            ...oldItem,
-            quantity: newQuantity,
-          }
+              ...oldItem,
+              quantity: newQuantity,
+            }
           : oldItem
       )
     );
@@ -54,10 +50,10 @@ function App() {
   //this function also serves the Cart.jsx file to enable the remove function in the checkout page
   function removeItem(item) {
     setCart((oldCart) => oldCart.filter((cartItem) => cartItem.id !== item.id));
-  }// basically the remove command works by manipulating the filter function, we use filter, then we set the command to filter the book and make it NOT EQUAL to the one looked for, thenn it will be filtered out
+  } // basically the remove command works by manipulating the filter function, we use filter, then we set the command to filter the book and make it NOT EQUAL to the one looked for, thenn it will be filtered out
   //brief explanation, use your logic gads skill here: [1, 2, 3, 4].filter(num => num !== 3)    it sends an array of [1, 2, 4]
   //if we use === 3, then it returns an array of [3], not what we want btw
-  
+
   function numberOfItems() {
     let counter = 0;
     cart.forEach((item) => {
