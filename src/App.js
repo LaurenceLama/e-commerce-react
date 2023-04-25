@@ -12,7 +12,11 @@ import { counter } from "@fortawesome/fontawesome-svg-core";
 function App() {
   const [cart, setCart] = useState([]);
 
+<<<<<<< HEAD
   // ...couldBeAnything the '...' is called a spread operator
+=======
+  // ...couldBeAnything the '...' is called a spread operatorrrss
+>>>>>>> 59415e9d85c1e069117567ce26bd664a7a01ba52
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id);
     setCart(
