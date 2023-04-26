@@ -98,6 +98,7 @@ function App() {
             />
           )}
         />
+        <Home />
         <Footer />
       </div>
     </Router>
