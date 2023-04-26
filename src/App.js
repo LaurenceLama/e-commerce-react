@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
@@ -7,7 +7,6 @@ import { books } from "./data";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
-import { counter } from "@fortawesome/fontawesome-svg-core";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -53,14 +52,6 @@ function App() {
   } // basically the remove command works by manipulating the filter function, we use filter, then we set the command to filter the book and make it NOT EQUAL to the one looked for, thenn it will be filtered out
   //brief explanation, use your logic gads skill here: [1, 2, 3, 4].filter(num => num !== 3)    it sends an array of [1, 2, 4]
   //if we use === 3, then it returns an array of [3], not what we want btw
-
-  function numberOfItems() {
-    let counter = 0;
-    cart.forEach((item) => {
-      counter += +item.quantity;
-    });
-    return counter;
-  }
 
   function numberOfItems() {
     let counter = 0;
