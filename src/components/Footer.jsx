@@ -13,14 +13,23 @@ const Footer = () => {
             </figure>
           </Link>
           <div className="footer__list">
-            <Link to="/" className="footer__link">
+            <Link
+              to="/"
+              className="footer__link link__hover-effect link__hover-effect--white"
+            >
               Home
             </Link>
             <span className="footer__link no-cursor">About</span>
-            <Link to="/books" className="footer__link">
+            <Link
+              to="/books"
+              className="footer__link link__hover-effect link__hover-effect--white"
+            >
               Books
             </Link>
-            <Link to="/cart" className="footer__link">
+            <Link
+              to="/cart"
+              className="footer__link link__hover-effect link__hover-effect--white"
+            >
               Cart
             </Link>
           </div>

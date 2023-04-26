@@ -101,7 +101,7 @@ const Cart = ({ cart, updateCart, removeItem, totals }) => {
                   className="btn btn__checkout no-cursor"
                   onClick={() =>
                     alert(
-                      `Haven't got around to doing this sorry mb fr istg :(`
+                      `You don't read, don't me, de jk katamad pa gawin :(`
                     )
                   }
                 >

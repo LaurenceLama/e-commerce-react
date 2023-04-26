@@ -40,10 +40,33 @@ p {
 
 a {
   text-decoration: none;
+  position: relative;
+  transition: all 300ms ease-in-out;
 }
 
-a:hover {
-  text-decoration: underline;
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #7342d6;
+    width: 0;
+    bottom: 8px;
+    left: 0;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .link__hover-effect:hover:after {
+    width: 100%;
+}
+
+.link__hover-effect--white:after {
+    background-color: white;
+    bottom: -3px;
+    left: 1px;
+}
+
+.link__hover-effect--black:after {
+    background-color: black;
 }
 
 ul {
@@ -84,6 +107,14 @@ button:active {
   border: none;
 }
 
+.scale {
+  transition: all 250ms ease-in-out;
+}
+
+.scale:hover {
+  background-color: #5d35ac;
+}
+
 .purple {
   color: #7342d6;
 }
@@ -117,10 +148,6 @@ button:active {
   justify-content: center;
 }
 
-.nav__link:hover {
-  text-decoration: underline;
-}
-
 .nav__link--primary {
   border: 2px solid #7342d6;
   border-radius: 4px;
@@ -128,6 +155,8 @@ button:active {
 
 .nav__link--primary:hover {
   text-decoration: none;
+  background-color: #7342d6;
+  color: white;
 }
 
 .nav__icon {
@@ -376,7 +405,7 @@ FEATURES
 }
 
 .book:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
 }
 
 .book__img {
@@ -483,7 +512,8 @@ footer {
 }
 
 .footer__link {
-  padding: 0 8px;
+  padding: 0 4px;
+  margin: 0 4px;
 }
 
 /* 
